@@ -3,14 +3,14 @@ from random import shuffle
 
 class Card:
     suits = ["Espada", "Basto", "Oro", "Copa"]
-    values = ["anchoEspada", "anchoBasto", "7", "6", "5", "4", "3", "2", "1","anchoOro", "anchoCopa","12","11","10"]
+    values = ["7", "6", "5", "4", "3", "2", "1","12","11","10"]
     
     def __init__(self, v, s):
         self.value = v
         self.suit = s
 
     def __str__(self):
-        return f"{self.value} de {self.suit}"
+        return f"{self.suit} de {self.value}"
     
 
 
