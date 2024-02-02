@@ -54,6 +54,7 @@ class Truco:
         self.P2 = Player(nombre2)
 
     def rondaDePrueba(self):
+        self.deck.shuffle()
         for _ in range(3):
             self.P1.agarrarCarta(self.deck)
             self.P2.agarrarCarta(self.deck)
