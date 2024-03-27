@@ -40,15 +40,15 @@ class Player:
     def play_card(self):
         return self.mazoCartas.pop
     
-    def mostrarMazo(self):
+    def mostrarMano(self):
         for card in self.mazoCartas:
             print(card)
 
 
 class Truco:
     def __init__(self):
-        nombre1 = input("nombre de jugador 1")
-        nombre2 = input("nombre de jugador 2")
+        nombre1 = input("nombre de jugador 1 ")
+        nombre2 = input("nombre de jugador 2 ")
         self.deck = Deck()
         self.P1 = Player(nombre1)
         self.P2 = Player(nombre2)
@@ -59,11 +59,11 @@ class Truco:
             self.P1.agarrarCarta(self.deck)
             self.P2.agarrarCarta(self.deck)
             
-        print(f"Mazo de cartas de {self.P1.nombre}:")
-        self.P1.mostrarMazo()
+        print(f"Mano de {self.P1.nombre}:")
+        self.P1.mostrarMano()
 
-        print(f"Mazo de cartas de {self.P2.nombre}:")
-        self.P2.mostrarMazo()
+        print(f"Mano de {self.P2.nombre}:")
+        self.P2.mostrarMano()
     
 
 if __name__ == "__main__":
